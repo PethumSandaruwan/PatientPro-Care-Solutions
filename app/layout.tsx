@@ -12,6 +12,9 @@ const Fonts = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "PatintPro",
   description: "A healthcare management system",
+  icons: {
+    icon: "/assets/icons/logo-icon.svg",
+  },
 };
 
 export default function RootLayout({
