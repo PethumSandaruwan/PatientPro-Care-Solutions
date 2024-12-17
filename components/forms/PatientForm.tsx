@@ -40,7 +40,11 @@ const PatientForm = () => {
   // Render the form
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 flex-1">
+        <section className="mb-12 space-y-4">
+          <h1 className="header text-cyan-300">Hi there</h1>
+          <p className="text-dark-700">Shedule your first appoinment</p>
+        </section>
         <FormField
           control={form.control}
           name="username"
