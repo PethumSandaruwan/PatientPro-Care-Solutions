@@ -4,16 +4,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+import {Form} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import CustomFormField from '@/components/CustomFormField'
 
 // Define the form schema
 const formSchema = z.object({
@@ -45,22 +38,10 @@ const PatientForm = () => {
           <h1 className="header text-cyan-300">Hi there</h1>
           <p className="text-dark-700">Shedule your first appoinment</p>
         </section>
-        <FormField
-          control={form.control}
-          name="username"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Username</FormLabel>
-              <FormControl>
-                <Input placeholder="shadcn" {...field} className="" />
-              </FormControl>
-              <FormDescription>
-                This is your public display name.
-              </FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
+        <CustomFormField
+        control={form.control}
         />
+    
         <Button type="submit" className="text-white">Submit</Button>
       </form>
     </Form>
