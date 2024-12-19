@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import {Form} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import CustomFormField from '@/components/CustomFormField'
+import SubmitButton from "../SubmitButton";
 
 export enum FormFieldType{
   INPUT='input',
@@ -17,6 +18,7 @@ export enum FormFieldType{
   SELECT='select',
   SKELETON='skeleton',
 }
+
 
 // Define the form schema
 const formSchema = z.object({
@@ -57,8 +59,27 @@ const PatientForm = () => {
         iconSrc="/assets/icons/user.svg"
         iconAlt="user"
         />
+      
+          <CustomFormField
+        fieldType={FormFieldType.INPUT}
+        control={form.control}
+        name="email"
+        label="Email"
+        placeholder="johndoe@gmail.com"
+        iconSrc="/assets/icons/email.svg"
+        iconAlt="user"
+        />
+          <CustomFormField
+        fieldType={FormFieldType.PHONE_INPUT}
+        control={form.control}
+        name="phone"
+        label="Phone number"
+        placeholder="0123456789"
+        iconSrc="/assets/icons/user.svg"
+        iconAlt="user"
+        />
     
-        <Button type="submit" className="text-white">Submit</Button>
+    <SubmitButton ></SubmitButton>
       </form>
     </Form>
   );
