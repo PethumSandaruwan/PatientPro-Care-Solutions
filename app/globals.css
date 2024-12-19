@@ -348,3 +348,8 @@
 .PhoneInputInput::placeholder {
   color: #1a1d21;
 }
+
+.PhoneInputCountrySelect {
+  background-color: #1a1a1a; /* Dark dropdown background */
+  color: #ffffff; /* White text */
+}
